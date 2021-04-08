@@ -1,4 +1,5 @@
 class RulesController < ApplicationController
+
   before_action :set_rule, only: %i[ show edit update destroy ]
   before_action :set_game
   
@@ -22,6 +23,7 @@ class RulesController < ApplicationController
 
   # POST /rules or /rules.json
   def create
+    byebug
     @rule = Rule.new(rule_params)
     @rule.update_attribute(:game_id, @game.id)
     respond_to do |format|

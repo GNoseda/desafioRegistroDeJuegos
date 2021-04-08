@@ -21,7 +21,8 @@
         <td>
           <ul>
             <% piece.attaches.each do |img| %>
-              <li> <%= image_tag img.variant(resize: '100x100')%> </li>
+              <li> <%= image_tag img.variant(resize: '100x100')%> || <%= link_to 'Download', rails_blob_path(img, disposition: "download") %></li>
+
             <% end %>
           </ul>
         </td>

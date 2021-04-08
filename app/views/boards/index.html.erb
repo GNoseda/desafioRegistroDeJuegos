@@ -15,6 +15,7 @@
       <tr>
         <td><%= board.size %></td>
         <td><%= image_tag board.attach.variant(resize: '100x80') %></td>
+        <td><%= link_to 'Download', rails_blob_path(board.attach, disposition: "download") %></td>
         <td><%= link_to 'Show', game_board_path(@game, board) %></td>
         <td><%= link_to 'Edit', edit_game_board_path(@game, board) %></td>
         <td><%= link_to 'Destroy', game_board_path(@game, board), method: :delete, data: { confirm: 'Are you sure?' } %></td>
