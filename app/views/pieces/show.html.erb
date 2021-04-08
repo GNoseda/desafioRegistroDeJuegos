@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @piece.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @piece.quantity %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @piece.color %>
+</p>
+
+<%= link_to 'Edit', edit_game_piece_path(@game, @piece) %> |
+<%= link_to 'Back', game_pieces_path(@game) %>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rule text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rules.each do |rule| %>
+      <tr>
+        <td><%= rule.rule_text %></td>
+        <td><%= link_to 'Download', rails_blob_path(rule.attach, disposition: "download") %></td>
+        <td><%= link_to 'Show', game_rule_path(@game, rule) %></td>
+        <td><%= link_to 'Edit', edit_game_rule_path(@game, rule) %></td>
+        <td><%= link_to 'Destroy', game_rule_path(@game, rule), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rule', new_game_rule_path %>

@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @board.size %>
+</p>
+
+<%= link_to 'Edit', edit_game_board_path(@game, @board) %> |
+<%= link_to 'Back', game_boards_path(@game) %>

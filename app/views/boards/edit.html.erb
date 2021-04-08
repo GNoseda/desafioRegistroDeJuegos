@@ -1,0 +1,6 @@
+<h1>Editing Board</h1>
+
+<%= render 'form', board: @board %>
+
+<%= link_to 'Show', game_board_path(@game, @board) %> |
+<%= link_to 'Back', game_boards_path(@game) %>
